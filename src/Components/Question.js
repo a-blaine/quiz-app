@@ -7,11 +7,11 @@ export default function Question({ answers, index, question }) {
         {index + 1}. {""}
         {question.question}
       </h2>
-      <ul>
+      <div className="options">
         {answers.map((answer, index) => {
-          return <li kay={index}>{answer}</li>;
+          return <button key={index}>{answer}</button>;
         })}
-      </ul>
+      </div>
     </div>
   );
 }

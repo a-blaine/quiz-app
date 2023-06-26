@@ -22,7 +22,10 @@ export default function Quiz() {
     return (
       <div className="quiz">
         <Questions questions={questions} loaded={true} />
-        <button onClick={() => setQuizState("endScreen")}>
+        <button
+          className="navigate-btn"
+          onClick={() => setQuizState("endScreen")}
+        >
           Click to reveal score!
         </button>
       </div>

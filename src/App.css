@@ -1,4 +1,4 @@
-button {
+.navigate-btn {
   padding: 12px 28px;
   border-radius: 30px;
   background: #fff;
@@ -7,7 +7,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.navigate-btn:hover {
   background: black;
   color: #fff;
 }
@@ -47,4 +47,18 @@ li {
 .Home button {
   height: 50px;
   width: 300px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.options button {
+  width: 300px;
+  height: 40px;
+  margin: 5px;
+  align-items: center;
 }

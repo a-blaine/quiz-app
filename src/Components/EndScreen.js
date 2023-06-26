@@ -7,7 +7,7 @@ export default function EndScreen() {
   return (
     <div className="EndScreen">
       <h2>You're finished!</h2>
-      <button onClick={() => setQuizState("home")}>
+      <button className="navigate-btn" onClick={() => setQuizState("home")}>
         Click here to return to home!
       </button>
     </div>

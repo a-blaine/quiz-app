@@ -5,7 +5,9 @@ export default function Home() {
   const { quizState, setQuizState } = useContext(QuizContext);
   return (
     <div className="Home">
-      <button onClick={() => setQuizState("quiz")}>Start Quiz!</button>
+      <button className="navigate-btn" onClick={() => setQuizState("quiz")}>
+        Start Quiz!
+      </button>
     </div>
   );
 }
