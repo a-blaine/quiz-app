@@ -1,0 +1,50 @@
+button {
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #fff;
+  transition: all 150ms ease-in-out;
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: black;
+  color: #fff;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.App {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.Home {
+  width: 500px;
+  height: 500px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: pink;
+}
+
+.Home button {
+  height: 50px;
+  width: 300px;
+}

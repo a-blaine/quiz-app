@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { QuizContext } from "../Helpers/Contexts";
 
 export default function Home() {
+  const { quizState, setQuizState } = useContext(QuizContext);
   return (
     <div className="Home">
-      <button>Start Quiz!</button>
+      <button onClick={() => setQuizState("quiz")}>Start Quiz!</button>
     </div>
   );
 }
