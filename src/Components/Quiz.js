@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { QuizContext } from "../Helpers/Contexts";
 import axios from "axios";
-import Question from "./Question";
+import Questions from "./Questions";
 
 export default function Quiz() {
   const { quizState, setQuizState } = useContext(QuizContext);
@@ -21,7 +21,7 @@ export default function Quiz() {
   if (loaded) {
     return (
       <div className="quiz">
-        <Question questions={questions} loaded={true} />
+        <Questions questions={questions} loaded={true} />
         <button onClick={() => setQuizState("endScreen")}>
           Click to reveal score!
         </button>
