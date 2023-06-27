@@ -1,10 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
-import { QuizContext } from "../Helpers/Contexts";
 import axios from "axios";
 import Questions from "./Questions";
 
 export default function Quiz() {
-  const { quizState, setQuizState } = useContext(QuizContext);
   const [questions, setQuestions] = useState([]);
   const [loaded, setLoaded] = useState(false);
 
@@ -22,12 +20,6 @@ export default function Quiz() {
     return (
       <div className="quiz">
         <Questions questions={questions} loaded={true} />
-        <button
-          className="navigate-btn"
-          onClick={() => setQuizState("endScreen")}
-        >
-          Click to reveal score!
-        </button>
       </div>
     );
   } else {
