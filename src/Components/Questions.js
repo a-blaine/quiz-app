@@ -10,7 +10,6 @@ export default function Questions({ questions, loaded }) {
     if (optionChosen === questions[currentQuestion].correct_answer) {
       setScore(score + 1);
     }
-
     if (currentQuestion < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
     }
@@ -73,6 +72,6 @@ export default function Questions({ questions, loaded }) {
       </div>
     );
   } else {
-    return <div>Searching..</div>;
+    return null;
   }
 }

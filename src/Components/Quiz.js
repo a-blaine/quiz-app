@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Questions from "./Questions";
+import { BounceLoader } from "react-spinners";
 
 export default function Quiz() {
   const [questions, setQuestions] = useState([]);
@@ -23,6 +24,10 @@ export default function Quiz() {
       </div>
     );
   } else {
-    return <div>Loading..</div>;
+    return (
+      <div className="loader">
+        <BounceLoader color="#d76d7f" size={70} />
+      </div>
+    );
   }
 }
