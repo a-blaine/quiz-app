@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import "./App.css";
 import EndScreen from "./Components/EndScreen";
 import Home from "./Components/Home";
@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Quiz App</h1>
+      <h1>Trivia Quiz App</h1>
       <QuizContext.Provider
         value={{ quizState, setQuizState, score, setScore }}
       >

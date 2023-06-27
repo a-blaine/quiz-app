@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { QuizContext } from "../Helpers/Contexts";
 
 export default function Questions({ questions, loaded }) {
-  const { score, setScore, quizState, setQuizState } = useContext(QuizContext);
+  const { score, setScore, setQuizState } = useContext(QuizContext);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [optionChosen, setOptionChosen] = useState();
 
@@ -10,10 +10,17 @@ export default function Questions({ questions, loaded }) {
     if (optionChosen === questions[currentQuestion].correct_answer) {
       setScore(score + 1);
     }
-    console.log(score);
+
     if (currentQuestion < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
     }
+  };
+
+  const finishQuiz = () => {
+    if (optionChosen === questions[currentQuestion].correct_answer) {
+      setScore(score + 1);
+    }
+    setQuizState("endScreen");
   };
   if (loaded) {
     return (
@@ -51,10 +58,7 @@ export default function Questions({ questions, loaded }) {
             </button>
           </div>
           {currentQuestion === questions.length - 1 ? (
-            <button
-              className="navigate-btn"
-              onClick={() => setQuizState("endScreen")}
-            >
+            <button className="navigate-btn" onClick={finishQuiz}>
               Finish quiz!
             </button>
           ) : (
