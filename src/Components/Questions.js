@@ -4,12 +4,13 @@ import { QuizContext } from "../Helpers/Contexts";
 export default function Questions({ questions, loaded }) {
   const { score, setScore, quizState, setQuizState } = useContext(QuizContext);
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [optionChosen, setOptionChosen] = useState(false);
+  const [optionChosen, setOptionChosen] = useState();
 
   const nextQuestion = () => {
-    if (optionChosen === true) {
+    if (optionChosen === questions[currentQuestion].correct_answer) {
       setScore(score + 1);
     }
+    console.log(score);
     if (currentQuestion < questions.length) {
       setCurrentQuestion(currentQuestion + 1);
     }
@@ -20,16 +21,32 @@ export default function Questions({ questions, loaded }) {
         <section>
           <h2>{questions[currentQuestion].question}</h2>
           <div className="options">
-            <button onClick={() => setOptionChosen(false)}>
+            <button
+              onClick={() =>
+                setOptionChosen(questions[currentQuestion].incorrect_answers[2])
+              }
+            >
               {questions[currentQuestion].incorrect_answers[2]}
             </button>
-            <button onClick={() => setOptionChosen(true)}>
+            <button
+              onClick={() =>
+                setOptionChosen(questions[currentQuestion].correct_answer)
+              }
+            >
               {questions[currentQuestion].correct_answer}
             </button>
-            <button onClick={() => setOptionChosen(false)}>
+            <button
+              onClick={() =>
+                setOptionChosen(questions[currentQuestion].incorrect_answers[0])
+              }
+            >
               {questions[currentQuestion].incorrect_answers[0]}
             </button>
-            <button onClick={() => setOptionChosen(false)}>
+            <button
+              onClick={() =>
+                setOptionChosen(questions[currentQuestion].incorrect_answers[1])
+              }
+            >
               {questions[currentQuestion].incorrect_answers[1]}
             </button>
           </div>

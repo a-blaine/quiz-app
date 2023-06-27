@@ -50,6 +50,10 @@ li {
   width: 300px;
 }
 
+.EndScreen {
+  text-align: center;
+}
+
 .options {
   display: flex;
   flex-direction: column;
