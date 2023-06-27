@@ -26,7 +26,10 @@ export default function Questions({ questions, loaded }) {
     return (
       <div className="Questions">
         <section>
-          <h2>{questions[currentQuestion].question}</h2>
+          <h2>
+            {currentQuestion + 1}. {""}
+            {questions[currentQuestion].question}
+          </h2>
           <div className="options">
             <button
               onClick={() =>

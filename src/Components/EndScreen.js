@@ -11,11 +11,13 @@ export default function EndScreen() {
 
   return (
     <div className="EndScreen">
-      <h2>You got {score} questions right!</h2>
+      <section>
+        <h2>You got {score} questions right!</h2>
 
-      <button className="navigate-btn" onClick={backToHome}>
-        Click here to try again!
-      </button>
+        <button className="navigate-btn" onClick={backToHome}>
+          Click here to try again!
+        </button>
+      </section>
     </div>
   );
 }

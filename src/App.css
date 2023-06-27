@@ -1,22 +1,13 @@
-.navigate-btn {
-  padding: 12px 28px;
-  border-radius: 30px;
-  background: #fff;
-  transition: all 150ms ease-in-out;
-  cursor: pointer;
-  margin: 5px auto;
-  display: block;
-}
-
-.navigate-btn:hover {
-  background: black;
-  color: #fff;
-}
-
-ul,
-li {
-  list-style: none;
-  padding: 0;
+section {
+  width: 500px;
+  height: 500px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: pink;
+  padding: 0 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .App {
@@ -32,17 +23,6 @@ li {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
-}
-
-.Home {
-  width: 500px;
-  height: 500px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: pink;
 }
 
 .Home button {
@@ -67,14 +47,30 @@ li {
   margin: 5px;
   align-items: center;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: none;
+  background: rgb(254, 219, 225);
+  border-radius: 8px;
 }
 
-section {
-  background: lightcoral;
-  width: 50vw;
-  height: 100%;
-  padding: 10px;
-  margin: 20px auto;
-  border-radius: 8px;
+.options button:hover {
+  background: rgb(251, 231, 235);
+}
+
+.navigate-btn {
+  padding: 12px 28px;
+  margin: 5px auto;
+  cursor: pointer;
+  color: #fff;
+  background: rgb(215, 109, 127);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: all 150ms ease-in-out;
+}
+
+.navigate-btn:hover {
+  background: black;
 }

@@ -6,9 +6,11 @@ export default function Home() {
 
   return (
     <div className="Home">
-      <button className="navigate-btn" onClick={() => setQuizState("quiz")}>
-        Start Quiz!
-      </button>
+      <section>
+        <button className="navigate-btn" onClick={() => setQuizState("quiz")}>
+          Start Quiz!
+        </button>
+      </section>
     </div>
   );
 }
