@@ -1,3 +1,19 @@
+html {
+  background: #000;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(
+    150deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(215, 109, 127, 1) 49%,
+    rgba(255, 192, 203, 1) 100%
+  );
+  background-position: cover;
+  background-repeat: no-repeat;
+}
+
 section {
   width: 500px;
   height: 500px;
@@ -5,9 +21,10 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background: pink;
+  background: #ffc0cb;
   padding: 0 20px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 150px;
 }
 
 .App {
@@ -23,6 +40,7 @@ section {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
+  text-shadow: rgba(255, 255, 255, 0.6) 1px 0 50px;
 }
 
 .Home button {
@@ -77,4 +95,115 @@ section {
 
 .loader {
   margin: 150px auto;
+}
+
+@media (max-width: 830px) {
+  section {
+    width: 400px;
+    height: 400px;
+  }
+  .App {
+    height: 100vh;
+  }
+
+  .App h1 {
+    font-size: 34px;
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .Home button {
+    width: 280px;
+  }
+
+  .navigate-btn {
+    margin: 5px auto 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    width: 350px;
+    height: 360px;
+    padding: 0 15px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .Home button {
+    width: 250px;
+  }
+
+  .navigate-btn {
+    margin: 8px auto 10px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .options button {
+    width: 250px;
+    height: 40px;
+    margin: 5px;
+    font-size: 13px;
+  }
+
+  .App h1 {
+    font-size: 30px;
+    margin: 20px auto 40px;
+  }
+}
+
+@media (max-width: 447px) {
+  section {
+    width: 320px;
+    height: 360px;
+    padding: 0 10px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .Home button {
+    width: 220px;
+  }
+
+  .navigate-btn {
+    margin: 8px auto 10px;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  .options button {
+    width: 250px;
+    height: 40px;
+    margin: 5px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .App h1 {
+    font-size: 30px;
+    margin: 40px auto 50px;
+  }
+}
+
+@media (max-width: 389px) {
+  section {
+    width: 300px;
+    height: 390px;
+  }
+
+  .navigate-btn {
+    margin: 5px auto 10px;
+  }
+
+  .App h1 {
+    text-shadow: rgba(255, 255, 255, 0.7) 1px 0 45px;
+  }
 }

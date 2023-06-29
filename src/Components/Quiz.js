@@ -26,7 +26,7 @@ export default function Quiz() {
   } else {
     return (
       <div className="loader">
-        <BounceLoader color="#d76d7f" size={70} />
+        <BounceLoader color="#ffffff" size={70} />
       </div>
     );
   }

@@ -21,6 +21,7 @@ export default function Questions({ questions, loaded }) {
     }
     setQuizState("endScreen");
   };
+
   if (loaded) {
     return (
       <div className="Questions">
